@@ -21,8 +21,8 @@ public class BluestoneWithoutActionsClass {
 	    Actions act = new Actions(driver);
 	    act.moveToElement(coins).perform();
 	    
-	    driver.findElement(By.xpath("//span[@text()='Coins by Design']")).click();
-	    if(driver.findElement(By.xpath("//h1[text()='Lakshmigoldcoins']")).isDisplayed())
+	    driver.findElement(By.xpath("//span[text()='Coins by Design']")).click();
+	    if(driver.findElement(By.xpath("//h1[text()=' Lakshmigoldcoins ']")).isDisplayed())
 	    {
 	    	System.out.println("text displayed!!");
 	    }
