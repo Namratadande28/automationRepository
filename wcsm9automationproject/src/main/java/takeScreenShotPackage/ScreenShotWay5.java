@@ -2,7 +2,6 @@ package takeScreenShotPackage;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.time.Duration;
 
 import org.openqa.selenium.OutputType;
@@ -24,10 +23,12 @@ public class ScreenShotWay5 {
 		
 		//take Screenshot of the webpage
 	    TakesScreenshot ts = (TakesScreenshot)driver;
+	    
 	    //call the method
-	    ts.getScreenshotAs(OutputType.FILE);
+	    File src = ts.getScreenshotAs(OutputType.FILE);
+	    
 	    //define way for storing ss
-	    new File("./Screenshots/seleniumss.png");
+	    File dest = new File("./Screenshots/seleniumss.png");
 	    
 		//store the screenshot into dest
 	    Files.copy(src, dest);
