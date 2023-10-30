@@ -5,11 +5,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LaunchChromeBrowser {
-	public static void main(String[] args) {
-		
-	WebDriver driver =new ChromeDriver();
-	driver.manage().window().maximize();
-	driver.close();
+	public static void main(String[] args) throws InterruptedException {
+	
+		//To launch chrome browser create the object of chromeDriver class
+	    WebDriver driver =new ChromeDriver();
+	    
+	    //Maximize chrome browser
+	    driver.manage().window().maximize();
+	    
+	    //Stop the execution of script for 2 sec
+	    Thread.sleep(2000);
+	    
+	    //close the browser
+	    driver.close();
 	}
 
 }
